@@ -31,4 +31,15 @@ const createRequirement = async (req, res) => {
 
 } 
 
-export default {createRequirement}
+
+const getAllRequirements = async (req,res) => {
+    const allRequirements = await RequirementsModel.find({});
+
+    res.status(200).json({
+        success : true,
+        message : "All requirements",
+        allRequirements,
+    })
+}
+
+export default {createRequirement, getAllRequirements}
