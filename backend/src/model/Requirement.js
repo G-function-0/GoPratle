@@ -26,6 +26,6 @@ const requirementsSchema = new mongoose.Schema({
     },
 },{timestamps :  true});
 
-const RequirementsModel = new mongoose.model("Requirement",requirementsSchema);
+const RequirementsModel = mongoose.model("Requirement",requirementsSchema);
 
 export { RequirementsModel };
