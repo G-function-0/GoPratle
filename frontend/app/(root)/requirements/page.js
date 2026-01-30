@@ -1,6 +1,7 @@
 "use client";
 
 import EventDetails from "@/components/EventDetails";
+import HireType from "@/components/HireType";
 import { useState } from "react";
 
 const Requirements = () => {
@@ -21,8 +22,8 @@ const Requirements = () => {
 
     return (<div>
         {step === 1 && <EventDetails onNext={handleNext} />}
-        {/* {step === 2 && <EventDetails onNext={handleNext} />}
-        {step === 3 && <EventDetails onSubmit={handleSubmit} />} */}
+        {step === 2 && <HireType onNext={handleNext} />}
+        {/* {step === 3 && <EventDetails onSubmit={handleSubmit} />} */}
     </div>)
 }
 
