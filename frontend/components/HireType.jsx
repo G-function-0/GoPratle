@@ -10,7 +10,7 @@ const HireType = ({onNext}) => {
 
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
-            <label>Who do you want to Hire?</label>
+            <h2>Who do you want to Hire?</h2>
             
             <select {...register("hireType",{required : true})}>
                 <option value="">Select an Option</option>

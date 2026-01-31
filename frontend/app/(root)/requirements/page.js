@@ -3,11 +3,14 @@
 import EventDetails from "@/components/EventDetails";
 import FinalDetails from "@/components/FinalDetails";
 import HireType from "@/components/HireType";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 const Requirements = () => {
     const [step,setStep] = useState(1);
     const [formData,setFormData] = useState({});
+    const router = useRouter();
+
 
     const handleNext = (data) => {
         setFormData((prev) => ({...prev,...data}));
@@ -30,7 +33,7 @@ const Requirements = () => {
 
         setFormData({});
         setStep(1);
-
+        router.push("/");
     }
 
     return (<div>

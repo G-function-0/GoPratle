@@ -12,11 +12,11 @@ const EventDetails = ({ onNext }) => {
     }
 
     return (<form onSubmit={handleSubmit(onSubmit)}>
-        <input placeholder="Enter Event Name" {...register("eventName")}/>
-        <input placeholder="Enter Event Type" {...register("eventType")} />
-        <input type="date" {...register("date")} />
-        <input placeholder="Enter Event Location" {...register("location")}/>
-        <input placeholder="Enter Venue Name" {...register("venue")} />
+        <input placeholder="Enter Event Name" {...register("eventName",{required : true})}/>
+        <input placeholder="Enter Event Type" {...register("eventType",{required : true})} />
+        <input type="date" {...register("date",{required : true})} />
+        <input placeholder="Enter Event Location" {...register("location",{required : true})}/>
+        <input placeholder="Enter Venue Name" {...register("venue",{required : true})} />
 
         <button type="submit">Next</button>
     </form>)
