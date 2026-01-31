@@ -11,7 +11,7 @@ export default function Home() {
   const fetchRequirements = async () => {
     try {
       setLoading(true);
-      const result = await fetch("http://localhost:1001/api/requirements")
+      const result = await fetch("https://gopratle-txai.onrender.com/api/requirements")
       const data = await result.json();
       setRequirements(data.allRequirements);
     } catch (error) {

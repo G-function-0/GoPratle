@@ -23,7 +23,7 @@ const Requirements = () => {
             details : data,
         }   
 
-        await fetch("http://localhost:1001/api/requirements",{
+        await fetch("https://gopratle-txai.onrender.com/api/requirements",{
             method : "POST",
             headers : { "Content-Type": "application/json" },
             body : JSON.stringify(payload),
