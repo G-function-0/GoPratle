@@ -21,9 +21,7 @@ const Requirements = () => {
         const payload = {
             ...formData,
             details : data,
-        }
-
-        console.log(payload);
+        }   
 
         await fetch("http://localhost:1001/api/requirements",{
             method : "POST",
